@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README-español.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="trabajo-laboratorio-computacion-en-cliente-web">Trabajo: Laboratorio: Computacion en Cliente Web</h1>
+<p><em>Peticiones con Ajax a una base de datos mendiante estandares WEB</em></p>
+<h2 id="objetivo-%F0%9F%9A%80">Objetivo 🚀</h2>
+<p><em>Utilizar las herramientas que posee VS Code para realizar peticiones a bases de datos cumpliendo con los estándares Web que se han creado para tal fin desde el año 2005.
+Trabajar con estándares web relacionados con conexiones AJAX, funciones asíncronas y componentes para realizar peticiones a una base de datos y representar la información obtenida en una página Web.<br>
+Estudiar cada una de las maneras de hacer peticiones AJAX desde la antigüedad, hasta nuestros días para la comunicación entre clientes web y servidores.</em></p>
+<h2 id="descripcion">Descripcion</h2>
+<p>En este laboratorio vamos a realizar una sencilla petición mediante estándares web
+y vamos a representar los datos obtenidos en una página de manera limpia. Iremos
+complicando y actualizando esta petición de datos para que cada vez se acerque más
+a la manera actual de realizarse en la práctica. Es decir, repasaremos cada una de las
+maneras de hacer peticiones AJAX desde la antigüedad, hasta nuestros días.</p>
+<h2 id="pre-requisitos-%F0%9F%93%8B">Pre-requisitos 📋</h2>
+<p><em>Que cosas necesitas para instalar el software y como instalarlas.</em></p>
+<ul>
+<li><strong>Bootstrap</strong> // Es un framework CSS front-end para crear páginas web, dispone de una serie de recursos que simplifican el desarrollo de sitios web con HTML5, CSS3 y jQuery, de manera que facilita la labor de diseño y desarrollo de toda clase de proyectos Web.</li>
+<li><strong>HTML Boilerplate</strong> // La extensión HTML5 Boilerplate (H5BP) agiliza el proceso de construcción de sitios web, permite añadir fácilmente toda una estructura de un sitio HTML5 a partir de una plantilla que sirve como base para que los desarrolladores web la adopten en sus diseños. Con H5BP podemos obtener código para la normalización de los navegadores, performance, optimizaciones para navegadores en dispositivos móviles, clases específicas para IE, clases Javascript, para estilos basados en capacidades del navegador carga de página más rápida entre otras funcionalidades que simplifican el desarrollo de software.</li>
+<li><strong>Element ChuckNorrisFact</strong> Es un web component que muestra chistes de chuck norris de modo random</li>
+</ul>
+<pre class="hljs"><code><div>https://www.webcomponents.org/element/@@npm/chuck-norris-fact-element
+</div></code></pre>
+<h2 id="instalaci%C3%B3n--iniciaci%C3%B3n%F0%9F%94%A7">Instalación &amp; Iniciación🔧</h2>
+<p>Las Extenciones a usar las encontramos en la galeria de extenciones de VSCode.
+<code>https://code.visualstudio.com/#hundreds-of-extensions </code></p>
+<h2 id="desarrollo">Desarrollo</h2>
+<p>En este laboratorio se utiliza una base de datos llamada ICNDB, inspirada en el famoso actor y experto en artes marciales conocido como Chuck Norris, que se encuentra en la página Web: http://www.icndb.com/, aquí se almacenan cientos de chistes inspirados en su carrera. Esta base de datos cuenta con una API REST o protocolo de intercambio y manipulación de datos, funciona como una interfaz entre sistemas que usan HTTP para obtener datos en múltiples formatos, como XML y JSON.</p>
+<p><img src="https://i.ibb.co/KNJpbQY/icndb-logo2.png" alt="SCF1"></p>
+<p>Se usarán las siguientes tecnologías de comunicación entre clientes web y servidores para cumplir con los objetivos planteados:</p>
+<ul>
+<li>El objeto XMLHttpRequest.</li>
+<li>Las funciones AJAX del archiconocido framework jQuery.</li>
+<li>Un complemento específico para jQuery creado por el mantenedor del servicio al que nos vamos a conectar.</li>
+<li>Por último, implementación de un componente web moderno (Web component) desarrollado por un tercero que nos permitirá realizar peticiones parecidas, pero de manera increíblemente elegante.</li>
+</ul>
+<h2 id="resolucion-del-ejercicio-de-la-forma-2005-%E2%8C%A8%EF%B8%8F">Resolucion del ejercicio de la forma 2005 ⌨️</h2>
+<p>Mediante el objeto XMLHttpRequest es posible hacer peticiones AJAX a través de clientes Web hacia servidores de la siguiente manera:</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            xmlhttp = <span class="hljs-keyword">new</span> XMLHttpRequest();
+            xmlhttp.open(<span class="hljs-string">'GET'</span>, <span class="hljs-string">'http://api.icndb.com/jokes/random/'</span>, <span class="hljs-literal">true</span>);
+            xmlhttp.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> textoChiste = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-keyword">this</span>.response).value.joke;
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'chiste recibido: '</span> + textoChiste);
+                <span class="hljs-keyword">var</span> h1s = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'h1'</span>);
+                h1s[<span class="hljs-number">0</span>].innerHTML = textoChiste;
+            }
+            xmlhttp.send();
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p>Jumbotron es un componente ligero y flexible usado para mostrar contenido estilizado, se puede expandir en toda la ventana gráfica para mostrar mensajes personalizados. Utiliza clases de utilidad para la tipografía y el espaciado del contenido dentro de contenedores más grandes. (JUMBOTRON, s.f.)
+Para aplicar este estilo y sustituir el texto del chiste en el título central de un elemento jumbotron del framework Bootstrap se hace de la siguiente manera:</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main "</span>&gt;</span> <span class="hljs-comment">&lt;!-- La estiqueta main define el contenido principal y destacado del DOM  --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"jumbotron "</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container "</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"display-3 "</span>&gt;</span>Aqui va el chiste =D<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+
+</div></code></pre>
+<p>La clase CSS jumbotron se implementa dentro de la etiqueta <strong>div</strong>, estas crean un contenedor en bloque que se define con una clase CSS a través del atributo class. Al utilizar la clase “jumbotron” se muestra un título que representa el contenido destacado de una página.</p>
+<p>Para utilizar Bootstrap se debe asegurar que las páginas están configuradas con los últimos estándares de diseño y desarrollo usando un doctype HTML5 e incluir una etiqueta <strong>meta</strong> para configuración del <strong>viewport</strong> que a su vez se encuentra dentro de la etiqueta <strong>head</strong>, así se obtiene el comportamiento adecuado para las diferentes resoluciones de pantalla que disponen los dispositivos modernos.</p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, shrink-to-fit=no"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Laboratorio Computación Cliente Web"</span>&gt;</span>
+
+</div></code></pre>
+<p><img src="https://i.ibb.co/mtVPdvM/Captura1.png" alt="2005" title="Pagina web con resutlado 2005"><em>Pagina web con resutlado 2005</em></p>
+<h2 id="resoluci%C3%B2n-del-ejercicion-de-la-forma-2006-%E2%8C%A8%EF%B8%8F">Resoluciòn del Ejercicion de la forma 2006 ⌨️</h2>
+<p>Al implementar la librería jQuery, se incorpora una nueva instrucción muy útil para realizar peticiones tal como se hacían en el 2006, para ello se debe enlazar el sitio Web con el recurso que provee dicha librería, por lo que se procede a crear otro fichero llamado “chuck2006.html” que utiliza el código JavaScript mostrado en el codigo anterior.</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            $.<span class="hljs-keyword">get</span>("http://api.icndb.com/jokes/random", (response) =&gt; {
+                <span class="hljs-keyword">var</span> textoChiste = response.value.joke;
+                $(<span class="hljs-string">'h1'</span>).text(textoChiste);
+            });
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p>Para enlazar con la biblioteca se utiliza la etiqueta “script” y mediante el atributo src se identifica la URL en donde se encuentra alojado jQuery. Cabe resaltar que el atributo integrity permite que el navegador verifique la fuente del archivo para asegurarse de que el código nunca se cargue si la fuente ha sido manipulada. Define un valor hash de un recurso (como una suma de comprobación) que debe coincidir para que el navegador lo ejecute. El hash asegura que el archivo no se modificó y contiene los datos esperados. De esta manera, el navegador no cargará recursos diferentes (por ejemplo, maliciosos). El atributo crossorigin permite configurar las peticiones CORS de los datos que se cargan. El Intercambio de Recursos de Origen Cruzado (CORS) es un mecanismo que utiliza cabeceras HTTP adicionales para permitir que un user agent obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.</p>
+<pre class="hljs"><code><div> <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://code.jquery.com/jquery-3.5.0.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p><img src="https://i.ibb.co/6FHgy3M/Captura2.png" alt="2006" title="Resultado Pagina Solucion 2006"><em>Resultado Pagina Solución 2006</em></p>
+<p><strong>¿Qué diferencias ves con respecto al ejercicio anterior?</strong></p>
+<p><em>Al usar el framework de JQuery se reduce la cantidad de código, de igual manera este mismo se presenta más limpio.</em></p>
+<p><strong>¿Cómo simplifica la vida jQuery?</strong></p>
+<p><em>JQuery nos permite de una manera mucho más fácil el desarrollo y la interacción con el DOM, de igual manera es intuitivo y fácil de usar.</em></p>
+<p><strong>¿Qué ocurre si tenemos varios tags h1?</strong></p>
+<p><em>Al tener varios tags h1, el código permite insertar el resultado obtenido (el chiste) e insertarlo en cada uno de los h1 que encuentre en el DOM.</em></p>
+<h2 id="resoluci%C3%B3n-con-el-plugin-de-jquery-2006-2014">Resolución con el plugin de JQuery (2006-2014)</h2>
+<p>Este plugin que de manera general se puede definir como una función que se le agrega al objeto jQuery, se ejecuta la instrucción para extraer una lista de chistes, cuando el documento DOM termina de cargarse y activa <strong>function().</strong> Mediante el método <em>$.icdn.getRandomJokes()</em> se obtiene una lista de chistes (10 en este caso) utilizando la propiedad nu</p>
+<p><em>src=“Bootstrap/js/jquery.icndb.min.js” &gt;&lt;/script.&gt;</em>. Cada elemento que se obtiene se va agregando a la lista mediante el atributo append sin que desaparezca el elemento anterior.</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://code.jquery.com/jquery-3.5.0.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bootstrap/js/jquery.icndb.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            $.icndb.getRandomJokes({
+                <span class="hljs-attr">number</span>: <span class="hljs-number">10</span>,
+                <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {
+                    response.forEach(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> {
+                        $(<span class="hljs-string">"ul.list-group"</span>).append(<span class="hljs-string">'&lt;li class="list-group-item"&gt;'</span> + element.joke + <span class="hljs-string">'&lt;/li&gt;'</span>);
+                    });
+                }
+            });
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p><em>Uso de plugin jQuery ICNDB para crear una lista de chistes</em></p>
+<p><img src="https://i.ibb.co/2tpZbK3/Captura3.png" alt="2006-2014"><em>Resultado pagina 2006-2014</em></p>
+<pre class="hljs"><code><div>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-12"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div></code></pre>
+<p><em>Clase container para dar caracteristicas a la lista</em></p>
+<p>Mediante la clase <strong>container</strong> se crea un contenedor de anchura fija y con la clase <strong>row</strong> se crean unas rejillas dentro del contenedor que en este caso se usan para separar cada chiste de la lista teniendo una división de un ancho definido con la clase <strong>col-12</strong>.</p>
+<p><strong>¿cómo se escribían las funciones en las versiones de ECMAScript previas a la versión 6?</strong>
+<em>En las versiones de ECMAScript previas a la 6, solo se podían escribir las funciones de una forma tradicional con la palabra reservada function, dándole un nombre y permitiendo parámetros de entrada. En la versión 6 se agregaron una variedad de formas para escribir funciones, como por ejemplo las funciones flecha (del inglés, Arrow functions) que son fácilmente identificados al implementar la sintaxis <strong>=&gt;</strong>.</em></p>
+<h2 id="resoluci%C3%B2n-2014-%E2%8C%A8%EF%B8%8F">Resoluciòn 2014 ⌨️</h2>
+<p>Para desarrollar este ejercicio se utilizará el método fetch, el cual fue definido por la <strong>WHATWG</strong>, y es un nuevo estándar de interacción por <strong>HTTP</strong> basado en promesas el cual funciona desde window como desde worker.</p>
+<p>Para su implementación hacemos su llamado como una propiedad de window, se pasa como parámetro la URL del servicio y variables de configuración como el método (en este caso el método GET). Posteriormente, el resultado de la promesa es convertido a formato JSON y se devuelve como promesa para que a través del iterador forEach sea insertado cada ítem (elemento li) a la lista del DOM.</p>
+<pre class="hljs"><code><div>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.fetch(<span class="hljs-string">'http://api.icndb.com/jokes/random/10'</span>, {
+                <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>
+            })
+            .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+                <span class="hljs-keyword">return</span> response.json();
+            })
+            .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+                <span class="hljs-keyword">var</span> ul = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"list"</span>);
+                jokes = data.value;
+                jokes.forEach(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> {
+                    ul.innerHTML += <span class="hljs-string">'&lt;li class="list-group-item"&gt;'</span> + element.joke + <span class="hljs-string">'&lt;/li&gt;'</span>;
+                });
+            });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p><em>Uso del Fetch</em></p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-12"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</div></code></pre>
+<p><em>Clase container para aplicar los resultados</em></p>
+<p><img src="https://i.ibb.co/8cwnp21/Captura4.png" alt="2014"><em>Resultado pagina 2014</em></p>
+<p>Para realizar la prueba a través del fetch con NodeJS, debemos haber instalado node en nuestro equipo, el cual se puede descargar desde el siguiente enlace: <code>https://nodejs.org/es/download/ </code></p>
+<p>Después creamos un archivo .js para este caso chuck-node.js el cual contendrá el siguiente código:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+fetch(<span class="hljs-string">'http://api.icndb.com/jokes/random/10'</span>, 
+        {
+            <span class="hljs-attr">method</span>: <span class="hljs-string">'get'</span>
+        })
+        .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+            <span class="hljs-keyword">return</span> response.json();
+        })
+        .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+          jokes = data.value;          
+          jokes.forEach(<span class="hljs-function"><span class="hljs-params">element</span> =&gt;</span> {  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"- "</span> + element.joke + <span class="hljs-string">"\n"</span>); });
+        });
+</div></code></pre>
+<p>El siguiente paso es abrir una consola e ir a la ruta de la carpeta donde se encuentra el archivo creado y ejecutamos el siguiente comando para agregar el módulo de node:</p>
+<pre class="hljs"><code><div>npm i node-fetch --save
+</div></code></pre>
+<p>Por último, ejecutamos el archivo creado con el comando node:</p>
+<pre class="hljs"><code><div>node chuck-node.js
+</div></code></pre>
+<p><img src="https://i.ibb.co/RCpPcy5/Captura5.png" alt="fetch"><em>Resultado de la peticiòn</em></p>
+<p><strong>¿Qué es el WHATWG (https://whatwg.org/)?</strong></p>
+<p><em>El WHATWG (Web Hypertext Application Technology Working Group) es una comunidad de personas y empresas interesadas en la evolución de HTML y tecnologías conexas.</em></p>
+<h2 id="resoluci%C3%B2n-con-web-components%E2%9C%8D">Resoluciòn con Web-Components✍</h2>
+<p>Mediante el uso de Web Components se puede obtener el contenido de la API de ICNDB. Esto se puede realizar de dos maneras:</p>
+<ul>
+<li>
+<p>Haciendo una referencia mediante el tag</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">“import”</span>&gt;</span>
+</div></code></pre>
+<p>hacia el repositorio del sitio web del componente.</p>
+</li>
+<li>
+<p>O haciendo el import de manera local instalando el Web Component a través de un gestor de paquetes como Bower por ejemplo.</p>
+</li>
+</ul>
+<h3 id="link-a-url-%E2%9A%99%EF%B8%8F">Link a URL ⚙️</h3>
+<p>Bajo el primer método basta con insertar la siguiente línea, que permite importar del Web component</p>
+<pre class="hljs"><code><div>chuck-norris-fact
+</div></code></pre>
+<p>y poderlo utilizar dentro del DOM:</p>
+<p><em>Para importar polify que es dependencia</em></p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"node_modules/@webcomponents/custom-elements/custom-elements.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p><em>Para Importar el Custom Element Chuck-Norris-Fact</em></p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"node_modules/chuck-norris-fact-element/chuck-norris-fact.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</div></code></pre>
+<p>Así mismo, se puede referenciar el framework de maquetado Skeleton mediante las instrucciones:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">&lt;!-- linking Skeleton --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"</span>&gt;</span>
+</div></code></pre>
+<p>Hecho esto, se puede generar el contenido de la tabla en la que se insertarán las bromas obtenidas haciendo uso de la etiqueta</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">chuck-norris-fact</span>&gt;</span>
+</div></code></pre>
+<p>No obstante, para hacerlo de una manera más dinámica se desarrolló una función que genere el contenido de la tabla. Antes de codificar las funciones se declaran dos variables, una para validación y otra que contendrá la etiqueta que hace referencia al Web Component importado previamente.</p>
+<pre class="hljs"><code><div>       <span class="hljs-keyword">var</span> bool = <span class="hljs-literal">false</span>; <span class="hljs-comment">//Variable de Validacion</span>
+       <span class="hljs-keyword">var</span> joke = <span class="hljs-string">'&lt;chuck-norris-fact&gt;'</span> <span class="hljs-comment">//Variable que contiene el tag</span>
+       
+       <span class="hljs-comment">//Declaracion de la Funciòn</span>
+       <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateJokeTable</span>(<span class="hljs-params"></span>) </span>{
+       <span class="hljs-comment">//Inicializacion de ciclo para otorgar 10 bromas</span>
+           <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">10</span>; i++) {
+           <span class="hljs-comment">//Imprecion de Contenido</span>
+               $(<span class="hljs-string">'table'</span>).append(<span class="hljs-string">'&lt;tr&gt;&lt;td&gt;'</span> + joke + <span class="hljs-string">'&lt;/td&gt;&lt;/tr&gt;'</span>)
+               <span class="hljs-built_in">console</span>.log(joke)
+           }
+           bool = <span class="hljs-literal">true</span>;
+       }
+       <span class="hljs-comment">//Funciòn para Aregar mas bromas al inicio</span>
+       <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addjokes</span>(<span class="hljs-params"></span>) </span>{
+           <span class="hljs-comment">//Ciclo para agregar 10 bromas mas</span>
+           <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">10</span>; i++) {
+               <span class="hljs-comment">//El metodo prepend agrega registros por encima</span>
+               $(<span class="hljs-string">'table'</span>).prepend(<span class="hljs-string">'&lt;tr&gt;&lt;td&gt;'</span> + joke + <span class="hljs-string">'&lt;/td&gt;&lt;/tr&gt;'</span>)
+               <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'adding'</span> + joke)
+           }
+       }
+       <span class="hljs-comment">//Funcion global que involucra a las otras funciones</span>
+       <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getJokes</span>(<span class="hljs-params"></span>) </span>{
+       <span class="hljs-comment">//Validanciòn de registros</span>
+           <span class="hljs-keyword">if</span> (bool === <span class="hljs-literal">true</span>) {
+               addjokes();
+           } <span class="hljs-keyword">else</span> {
+               generateJokeTable();
+           }
+       }
+       <span class="hljs-comment">//Genera Contenido al cargar la ventana.</span>
+       <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+           generateJokeTable();
+       }
+</div></code></pre>
+<pre class="hljs"><code><div>    &lt;<span class="hljs-selector-tag">style</span>&gt;
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;
+            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.6</span>;
+            <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+            <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Raleway"</span>, <span class="hljs-string">"HelveticaNeue"</span>, <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif;
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#222</span>;
+        }
+        
+        <span class="hljs-selector-class">.button</span> {
+            <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100px</span>;
+        }
+        
+        <span class="hljs-selector-class">.section-heading</span>,
+        <span class="hljs-selector-class">.section-description</span> {
+            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">1.5em</span>;
+            <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.2em</span>;
+        }
+</div></code></pre>
+<p><em>Cambio de diseño a Skeleton</em></p>
+<p>Para visualizar la petición con Web Components se pueden usar los navegadores con modo emulacion de dispositivo.
+<img src="https://i.ibb.co/5r6St39/Captura6.png" alt="Web Component"><em>Responsivo con Skeleton</em></p>
+<h2 id="despliegue-%F0%9F%93%A6">Despliegue 📦</h2>
+<p><em>En caso de no funcionar verificar las dependencias:</em></p>
+<ul>
+<li>Bootstrap 5</li>
+<li>Node_modules:
+<ul>
+<li>chuck-norris-fact-element</li>
+<li>json3</li>
+<li>node-fetch</li>
+<li>polyfill</li>
+</ul>
+</li>
+<li>Skeleton</li>
+</ul>
+<h2 id="construido-con-%F0%9F%9B%A0%EF%B8%8F">Construido con 🛠️</h2>
+<p><em>Menciona las herramientas que utilizaste para crear tu proyecto</em></p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - El IDE Usado</li>
+</ul>
+<h2 id="licencia-%F0%9F%93%84">Licencia 📄</h2>
+<p>Este practica fue proporcionada por la Universidad de la Rioja para la materia de Cliente Servidor.</p>
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li>
+<p><strong>API_Market, B.</strong> (23 de MARZO de 2016). API REST. Obtenido de API REST: https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos</p>
+</li>
+<li>
+<p><strong>CANINOS, N.</strong> (06 de SEPTIEMBRE de 2015). bootstrap. Obtenido de bootstrap: https://www.negocioscaninos.com/que-es-bootstrap-bootstrap-framework-front-end/</p>
+</li>
+<li>
+<p><strong>CARBALLO, R. G.</strong> (07 de NOVIEMBRE de 2012). ETIQUETAS. Obtenido de TODO HTML: https://sites.google.com/site/dwebhtml/reference</p>
+</li>
+<li>
+<p><strong>HTML5.</strong> (2013). Que es HTML5 Boilerplate. Obtenido de Que es HTML5 Boilerplate: https://www.htmlcinco.com/html5-boilerplate/#comments</p>
+</li>
+<li>
+<p><strong>JUMBOTRON</strong>, C. (s.f.). jumbotron. Obtenido de jumbotron: https://www.tutorialesprogramacionya.com/cssya/bootstrapya/detalleconcepto.php?codigo=149</p>
+</li>
+<li>
+<p><strong>MDN.</strong> (06 de MAYO de 2019). MDN web docs . Obtenido de Control de acceso HTTP (CORS): https://developer.mozilla.org/es/docs/Web/HTTP/Access_control_CORS</p>
+</li>
+</ul>
+<h2 id="concluciones%F0%9F%92%AD">Concluciones💭</h2>
+<p><em>VS Code es un potente editor de código usado en desarrollo, tiene incorporado multitud de funcionalidades que facilitan el trabajo del desarrollo Web, es así como se han utilizado en este laboratorio las extensiones HTML 5 Boilerplate y Bootstrap, que trabajan con los estándares usados en la mayoría de las aplicaciones Web.</em></p>
+<p><em>Se ha desarrollado el código para realizar peticiones a la base de datos ICNDB y se han comprendido las características propias de cada uno de los estándares Web que han surgido desde el año 2005.</em></p>
+<hr>
+<p>⌨️ con ❤️ por <a href="https://github.com/luisgr95">Luisgr95</a> 😊</p>
+
+</body>
+</html>
